@@ -1,5 +1,5 @@
-# ✅CLI Program Templates
-A list of CLI Program Templates, useful to learn programming languages or quickly start writing a CLI program🍵
+# 💻CLI Program Templates
+🍵A list of CLI Program Templates, useful to learn programming languages or quickly start writing a CLI program
 |Available languages📝|
 |-|
 |[C++](https://github.com/MaxWasTakenYT/cliProgramTemplates/blob/main/cpp-template.cpp)|
