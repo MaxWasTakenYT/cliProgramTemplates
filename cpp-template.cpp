@@ -25,7 +25,6 @@ int main(int argc, char* argv[]) {
         }
 
         else if (arg == "--help" || arg == "-h") {
-            // If the `--test` or `-t` argument gets parsed, this will run
             usage(); // Calls the `usage` function, outputting the usage message
             return 0;
         }
