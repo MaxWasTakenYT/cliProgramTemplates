@@ -4,8 +4,9 @@
 // (un)Licensed by the Unlicense, for more information, please refer to <https://unlicense.org>
 
 void usage() {
-    std::cout << "usage: [--test | -t > Description for the argument]\n"
-    << "       [--help | -h > e.g. Outputs usage and exits.]\n";
+    std::cout << "Program usage:\n"
+    << "[--test | -t > Description for the argument]\n"
+    << "[--help | -h > e.g. Outputs usage and exits.]\n";
 }
 
 int main(int argc, char* argv[]) {
