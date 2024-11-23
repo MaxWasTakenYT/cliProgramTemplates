@@ -6,37 +6,35 @@ class Program
 {
     static void Usage()
     {
-        Console.WriteLine("usage: [--test | -t > Description for the argument]");
-        Console.WriteLine("       [--help | -h > e.g. Outputs usage and exits.]");
+        Console.WriteLine("Program usage:");
+        Console.WriteLine("[--test | -t > Description for the argument]");
+        Console.WriteLine("[--help | -h > e.g. Outputs usage and exits.]");
     }
 
     static void Main(string[] args)
     {
-        if (args.Length == 0)
-        {
+        if (args.Length == 0) {
             // If no argument was given
             Console.WriteLine("no arguments were given");
-            return;
+            return 1; // Optionally returns a non-zero value, which can be used to signal that an error occurred
         }
 
-        foreach (var arg in args)
-        {
-            if (arg == "--test" || arg == "-t")
-            {
-                // If the `--test` or `-t` argument gets parsed
+        foreach (var arg in args) {
+            if (arg == "--test" || arg == "-t") {
+                // If the `--test` or `-t` argument gets parsed, this will run
                 Console.WriteLine("test parsed");
             }
-            else if (arg == "--help" || arg == "-h")
-            {
-                Usage();
-                return;
+
+            else if (arg == "--help" || arg == "-h") {
+                Usage(); // Calls the `usage` function, outputting the usage message
+                return 0;
             }
-            else
-            {
+
+            else {
                 // If the argument parsed isn't in the list above
                 Console.WriteLine($"unknown option: {arg}");
                 Usage();
-                return;
+                return 1; // Optionally returns a non-zero value, which can be used to signal that an error occurred
             }
         }
     }
